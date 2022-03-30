@@ -1,26 +1,30 @@
-import React from "react";
-import { TASKS } from "../data";
+import React, { useState } from "react";
+//import React from "react";
+import {TASKS} from "../data";
 //import Task from "./Task.js";
-
-//const tasks = {TASKS}
 
 
 
 const TaskList = () =>  {
-  let tasks = [TASKS];
+  const task = {TASKS}
+  const [tasks, setTasks] = useState([{text: "Brush teeth"}, {text: "Wash the car"}])
   console.log(tasks)
+  //const tasker = tasks.map(task) => <li {task.text}></li>;
+  const tasker = tasks.map(task => {
+    return (
+      <li>{task.text}</li>)
+    })
+    console.log(tasker)
 
-  return  (
-    <div className="tasks"> 
-      <h1>Where are the tasks?</h1> 
-      <p>
-        tasks
-      </p>
-      
-    {/* display a list of tasks using Task component */}  
-   </div>
+    return  (
+      <div className="tasks"> 
+        {tasker} 
+      </div>
+     
   );
 }
 
 
 export default TaskList;
+
+

@@ -10,10 +10,11 @@ console.log({ CATEGORIES, TASKS });
 function App() {
   return (
     <div className="App">
-      <h2>My tasks</h2>
+      <h2>Yolanda's tasks</h2>
       <CategoryFilter />
       <NewTaskForm />
-      <TaskList tasks = {TASKS} />
+      <TaskList /> 
+      
     </div>
   );
 }
